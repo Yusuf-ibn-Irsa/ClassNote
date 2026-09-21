@@ -38,6 +38,12 @@ If there are three vectors that makes a **parallelepiped** (a solid made of six 
 	$a \cdot (b \times c) = (a \times b) \cdot c$ 
 	$a \times (b \times c) = (a \cdot c)b - (a \cdot b)c$ 
 
+For getting the distance D between a plane and a point, we must first understand the concept of **vector projection**.
+![[Pasted image 20260921093107.png|333]]
+As shown in the graph, component of vector b on a is $comp_ab = \frac{a\cdot b}{|\vec{a}|}$.
+$$a \cdot b = |a||b|\cos{\theta} = |a||b|\cdot \frac{comp_ab}{|b|}$$
+Therefore, it needs to be divided by |a|
+
 ### 12.5 Lines and Planes
 $P_0(x_0, y_0, z_0)$ is an arbitrary point at line $L$, a vector $\vec{v} = <a,b,c>,\ v \parallel L$, $r_0 = <x_0,y_0,z_0>$ and $r = <x,y,z>$ are the position vectors of $\vec{OP_0}$ and $\vec{OP}$. Let $t$ be an input, now
 $$r = r_0 + tv$$
