@@ -158,8 +158,39 @@ $$\frac{\partial ^2 z}{\partial r \partial s} = 4rs\cdot z_{xx}+14(r^2+s^2)\cdot
 
 #### Implicit Differentiation
 Here is $F(x,y)$ and $y$ is differentiable by $x$
+Therefore, $F(x,y) = F(x, f(x)) = k$, where k is some kind of constant
+Then we take the derivative of $F(x, y)$ with respect to x
+$$\frac{\partial F}{\partial x} \frac{dx}{dx} + \frac{\partial F}{\partial y}\frac{dy}{dx} = 0$$
+Then $\frac{dx}{dx}=1$, then just do substitution and you get
 $$\frac{dy}{dx} = -\frac{\frac{\partial F}{\partial x}}{\frac{\partial F}{\partial y}} = - \frac{F_x}{F_y}$$
 e.g. find $y'$ if $x^3 +y^3 =6xy$
 $$F(x,y) = x^3 + y^3 - 6xy = 0$$
 $$\frac{dy}{dx} = - \frac{F_x}{F_y}$$
 随后便可自行计算
+
+### 14.6 Directional Derivatives and the Gradient Vector
+WARNING: A LOT OF THINKING
+Suppose that we now wish to find the rate of change of $z$ at $(x_0,y_0)$ in the direction of an arbitrary unit vector $u = <a,b>$. Consider $z = f(x,y)$ and $z_0 = f(x_0,y_0)$. Then a point $P = (x_0,y_0,z_0)$ lies on a surface $S$. The vertical plane that passes through $P$ in the direction of $u$ intersects $S$ in a curve $C$. The slope of the tangent line $T$ to $C$ at the $P$ is the rate of change of $z$ in the direction of $u$.
+$Q(x,y,z)$ is another point on $C$. $P', Q'$ are the projections of $P, Q$ onto the xy-plane, then the vector $\vec{P'Q'}$ is parallel to $u$ and so $\vec{P'Q'} = hu = <ha, hb>$
+![[Pasted image 20260923181819.png]]
+$$x-x_0 = ha,\ y - y_0 = hb$$
+$$x = x_0 + ha, \ y = y_0 + hb$$
+$$\frac{\triangle z}{h} = \frac{z - z_0}{h} = \frac{f(x_0 + ha, y_0 + hb) - f(x_0, y_0)}{h}$$
+$$D_uf(x_0, y_0) = \lim_{h \to 0} \frac{f(x_0 + ha, y_0 + hb) - f(x_0, y_0)}{h}$$
+To make the equation above more practical, let
+$$g(h) = f(x_0 + ha, y_0 + hb)$$
+$$g'(0) =\lim_{h \to 0} \frac{g(h) - g(0)}{h} = \lim_{h \to 0} \frac{f(x_0 + ha, y_0 + hb) - f(x_0, y_0)}{h} = D_uf(x_0, y_0)$$
+$$g'(h) = \frac{\partial f}{\partial x}\frac{dx}{dh} + \frac{\partial f}{\partial y}\frac{dy}{dh} = f_x(x,y)a + f_y(x,y)b = D_uf(x, y)$$
+Since $u$ is a unit vector, it can be shown as $<cos \theta, sin \theta>$.
+Then
+$$D_uf(x, y) = f_x(x,y)\cos{\theta} + f_y(x,y)\sin{\theta}$$
+#### The Gradient Vector
+$$D_uf(x, y) = f_x(x,y)a + f_y(x,y)b  = <f_x(x,y),\ f_y(x,y)> \cdot u$$
+Gradient of $f$
+$$\nabla f(x,y) = <f_x(x,y),\ f_y(x,y)> = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j$$
+
+#### Maximizing the Directional Derivative
+$$D_uf = \nabla f \cdot u = |\nabla f||u|\cos{\theta} = |\nabla f|\cos{\theta}$$
+We can see that $D_uf$ will be maximized when $\nabla f$ and $u$ have the same direction.
+
+#### Tangent Planes to Level Surfaces
