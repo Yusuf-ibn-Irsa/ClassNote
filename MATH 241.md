@@ -194,3 +194,21 @@ $$D_uf = \nabla f \cdot u = |\nabla f||u|\cos{\theta} = |\nabla f|\cos{\theta}$$
 We can see that $D_uf$ will be maximized when $\nabla f$ and $u$ have the same direction.
 
 #### Tangent Planes to Level Surfaces
+$S$ is a surface with equation $F(x,y,z)=k$,  which is a level surface of a function $F$ of 3 var, $P(x_0,y_0,z_0)$ is a point on $S$, $C$ be any curve that lies on $S$ and passes through $P$. $C$ can be described by a function $r(t) = <x(t), y(t), z(t)>$. Let $r(t_0) = <x_0, y_0, z_0>$. 
+Since $C$ lies on $S$, $F(x(t), y(t), z(t)) = k$. If $x, y, z$ are differentiable w.r.t. $t$ and $F$ is also differentiable, differentiate $F$ and we get
+$$\frac{\partial F}{\partial x}\frac{\partial x}{\partial t} + 
+\frac{\partial F}{\partial y}\frac{\partial y}{\partial t} +
+\frac{\partial F}{\partial z}\frac{\partial z}{\partial t} = 0$$
+Notice that
+$$\nabla F = <F_x,F_y,F_z>,\ r'(t) = <x'(t), y'(t),z'(t)>$$
+$$\nabla F \cdot r'(t) = 0$$
+the dot product is exactly the one equation above.
+Now, we plug in $t_0$ in the equation, which
+$$\nabla F(x_0,y_0,z_0) \cdot r'(t_0) = 0$$
+This equation means that the **gradient vector** at $P$, $\nabla F(x_0,y_0,z_0)$ is $\perp$ to **tangent vector** $r'(t_0)$ to **any curve** $C$ on $S$ that passes through $P$. Therefore, F can describe a **tangent plane to the level surface** $F(x,y,z)=k$ at $P$ with normal vector $\nabla F(x_0,y_0,x_0)$.
+![[Pasted image 20260926104837.png]]
+$$F_x(x_0,y_0,z_0)(x-x_0) + 
+F_y(x_0,y_0,z_0)(y-y_0) +
+F_z(x_0,y_0,z_0)(z-z_0) = 0$$
+and the normal lime to $S$ at $P$ (就是将$\nabla F$向量变成一条线)
+$$\frac{x-x_0}{F_x(x_0,y_0,z_0)} = \frac{y-y_0}{F_y(x_0,y_0,z_0)} = \frac{z-z_0}{F_z(x_0,y_0,z_0)}$$
