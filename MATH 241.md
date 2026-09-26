@@ -212,3 +212,25 @@ F_y(x_0,y_0,z_0)(y-y_0) +
 F_z(x_0,y_0,z_0)(z-z_0) = 0$$
 and the normal lime to $S$ at $P$ (就是将$\nabla F$向量变成一条线)
 $$\frac{x-x_0}{F_x(x_0,y_0,z_0)} = \frac{y-y_0}{F_y(x_0,y_0,z_0)} = \frac{z-z_0}{F_z(x_0,y_0,z_0)}$$
+
+### 14.7 Maximum and Minimum Values
+If $f(x,y)$ has a local max / min at $(a, b) and $f$ is differentiable at (a,b), then $f_x(a,b)$ and $f_y(a,b) = 0$
+(a, b) is called a **critical point / stationary point** of f if $f_x(a,b) = 0$ and $f_y(a,b) = 0$ or if one of these partial derivatives DNE.
+**Saddle point**: $f_x$ and $f_y$ are both 0 at(a, b), but it's neither a local max nor local min. e.g. (0,0) of the graph
+![[Pasted image 20260926121626.png]]
+#### Second Derivatives Test
+$f_x(a,b) = 0,\ f_y(a,b) = 0$. Now we have a critical point
+$$D = D(a,b) =\left| \begin{matrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy} \end{matrix}\right| = 
+f_{xx}f_{yy} - (f_{xy})^2$$
+If D>0:
+	$f_{xx}>0$, then it is local min
+	$f_{xx}<0$, then it is local max
+If D < 0:
+	it is a saddle point
+If D == 0:
+	it means nothing
+
+#### Absolute Max and Min
+A **closed set** in $R^2$ contains all its boundary points. e.g.
+$$D = \{ (x,y) | x^2 + y^2 \leq 1\}$$
+If $f$ is continuous on a **closed, bounded** set $D$ in $R^2$, then $f$ attains an absolute max value $f(x_1,y_1)$ and an absolute minimum value $f(x_2,y_2)$ at some points in $D$
